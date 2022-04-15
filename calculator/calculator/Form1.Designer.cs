@@ -89,6 +89,7 @@
             this.btPlus.TabIndex = 3;
             this.btPlus.Text = "+";
             this.btPlus.UseVisualStyleBackColor = true;
+            this.btPlus.Click += new System.EventHandler(this.btPlus_Click);
             // 
             // btClear
             // 
@@ -98,6 +99,7 @@
             this.btClear.TabIndex = 4;
             this.btClear.Text = "C";
             this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // btPercentage
             // 
@@ -107,6 +109,7 @@
             this.btPercentage.TabIndex = 9;
             this.btPercentage.Text = "%";
             this.btPercentage.UseVisualStyleBackColor = true;
+            this.btPercentage.Click += new System.EventHandler(this.btPercentage_Click);
             // 
             // btMinus
             // 
@@ -116,6 +119,7 @@
             this.btMinus.TabIndex = 8;
             this.btMinus.Text = "-";
             this.btMinus.UseVisualStyleBackColor = true;
+            this.btMinus.Click += new System.EventHandler(this.btMinus_Click);
             // 
             // btSix
             // 
@@ -155,6 +159,7 @@
             this.btSquareRoot.TabIndex = 14;
             this.btSquareRoot.Text = "RQ";
             this.btSquareRoot.UseVisualStyleBackColor = true;
+            this.btSquareRoot.Click += new System.EventHandler(this.btSquareRoot_Click);
             // 
             // btDivision
             // 
@@ -164,6 +169,7 @@
             this.btDivision.TabIndex = 13;
             this.btDivision.Text = "/";
             this.btDivision.UseVisualStyleBackColor = true;
+            this.btDivision.Click += new System.EventHandler(this.btDivision_Click);
             // 
             // btThree
             // 
@@ -203,6 +209,7 @@
             this.btEqual.TabIndex = 19;
             this.btEqual.Text = "=";
             this.btEqual.UseVisualStyleBackColor = true;
+            this.btEqual.Click += new System.EventHandler(this.btEqual_Click);
             // 
             // btPoint
             // 
@@ -212,6 +219,7 @@
             this.btPoint.TabIndex = 18;
             this.btPoint.Text = ",";
             this.btPoint.UseVisualStyleBackColor = true;
+            this.btPoint.Click += new System.EventHandler(this.btPoint_Click);
             // 
             // btMultiplication
             // 
@@ -221,6 +229,7 @@
             this.btMultiplication.TabIndex = 17;
             this.btMultiplication.Text = "*";
             this.btMultiplication.UseVisualStyleBackColor = true;
+            this.btMultiplication.Click += new System.EventHandler(this.btMultiplication_Click);
             // 
             // btInvert
             // 
@@ -276,6 +285,8 @@
             this.Controls.Add(this.btNine);
             this.Controls.Add(this.btEight);
             this.Controls.Add(this.btSeven);
+            this.MaximumSize = new System.Drawing.Size(292, 307);
+            this.MinimumSize = new System.Drawing.Size(292, 307);
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.ResumeLayout(false);
