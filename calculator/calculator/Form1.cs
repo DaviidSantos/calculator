@@ -101,17 +101,25 @@ namespace calculator
 
         private void btPlus_Click(object sender, EventArgs e)
         {
-            if (firstNumber == 0)
+
+            if (display.Text == "")
             {
-                firstNumber = double.Parse(display.Text);
-            }
-            else if (operation != "+")
-            {
-                firstNumber = Calculate(firstNumber);
+                MessageBox.Show("SYNTAX ERROR!");
             }
             else
             {
-                firstNumber += double.Parse(display.Text);
+                if (firstNumber == 0)
+                {
+                    firstNumber = double.Parse(display.Text);
+                }
+                else if (operation != "+")
+                {
+                    firstNumber = Calculate(firstNumber);
+                }
+                else
+                {
+                    firstNumber += double.Parse(display.Text);
+                }
             }
 
             operation = "+";
@@ -166,17 +174,24 @@ namespace calculator
 
         private void btDivision_Click(object sender, EventArgs e)
         {
-            if (firstNumber == 0)
+            if (display.Text == "")
             {
-                firstNumber = double.Parse(display.Text);
-            }
-            else if(operation != "/")
-            {
-                firstNumber = Calculate(firstNumber);
+                MessageBox.Show("SYNTAX ERROR!");
             }
             else
             {
-                firstNumber /= double.Parse(display.Text);
+                if (firstNumber == 0)
+                {
+                    firstNumber = double.Parse(display.Text);
+                }
+                else if (operation != "/")
+                {
+                    firstNumber = Calculate(firstNumber);
+                }
+                else
+                {
+                    firstNumber /= double.Parse(display.Text);
+                }
             }
 
             operation = "/";
@@ -212,17 +227,24 @@ namespace calculator
 
         private void btMultiplication_Click(object sender, EventArgs e)
         {
-            if (firstNumber == 0)
+            if (display.Text == "")
             {
-                firstNumber = double.Parse(display.Text);
-            }
-            else if (operation != "*")
-            {
-                firstNumber = Calculate(firstNumber);
+                MessageBox.Show("SYNTAX ERROR!");
             }
             else
             {
-                firstNumber *= double.Parse(display.Text);
+                if (firstNumber == 0)
+                {
+                    firstNumber = double.Parse(display.Text);
+                }
+                else if (operation != "*")
+                {
+                    firstNumber = Calculate(firstNumber);
+                }
+                else
+                {
+                    firstNumber *= double.Parse(display.Text);
+                }
             }
 
             operation = "*";
@@ -231,17 +253,24 @@ namespace calculator
 
         private void btPercentage_Click(object sender, EventArgs e)
         {
-            if (firstNumber == 0)
+            if (display.Text == "")
             {
-                firstNumber = double.Parse(display.Text);
-            }
-            else if (operation != "%")
-            {
-                firstNumber = Calculate(firstNumber);
+                MessageBox.Show("SYNTAX ERROR!");
             }
             else
             {
-                firstNumber = firstNumber / double.Parse(display.Text)/100;
+                if (firstNumber == 0)
+                {
+                    firstNumber = double.Parse(display.Text);
+                }
+                else if (operation != "%")
+                {
+                    firstNumber = Calculate(firstNumber);
+                }
+                else
+                {
+                    firstNumber = firstNumber / double.Parse(display.Text) / 100;
+                }
             }
 
             operation = "%";
@@ -250,24 +279,31 @@ namespace calculator
 
         private void btSquareRoot_Click(object sender, EventArgs e)
         {
-            if (result == 0)
+            if (display.Text == "")
             {
-                if (firstNumber == 0)
-                {
-                    firstNumber = double.Parse(display.Text);
-                    result = Math.Sqrt(firstNumber);
-                    display.Text = result.ToString();
-                }
-                else
-                {
-                    result = Math.Sqrt(firstNumber);
-                    display.Text = result.ToString();
-                }
+                MessageBox.Show("SYNTAX ERROR!");
             }
             else
             {
-                result = Math.Sqrt(result);
-                display.Text = result.ToString();
+                if (result == 0)
+                {
+                    if (firstNumber == 0)
+                    {
+                        firstNumber = double.Parse(display.Text);
+                        result = Math.Sqrt(firstNumber);
+                        display.Text = result.ToString();
+                    }
+                    else
+                    {
+                        result = Math.Sqrt(firstNumber);
+                        display.Text = result.ToString();
+                    }
+                }
+                else
+                {
+                    result = Math.Sqrt(result);
+                    display.Text = result.ToString();
+                }
             }
         }
         private void displayNumber(string numberPressed, double result)
